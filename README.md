@@ -1,2 +1,2 @@
-# gonzalo's homedir
-
+# dotfiles: gnz
+## A sad attempt at organizing my dotfiles
