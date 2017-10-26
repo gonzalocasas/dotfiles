@@ -1,0 +1,1 @@
+alias fail="tail -f"

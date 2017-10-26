@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# bootstraps dotfiles...
+if [ -e ~/.gitconfig ]; then rm -f ~/.gitconfig ; fi ; ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+if [ -e ~/.zshrc ]; then rm -f ~/.zshrc ; fi ; ln -s ~/.dotfiles/zshrc ~/.zshrc
+if [ -e ~/.ssh ]; then rm -rf ~/.ssh ; fi ; ln -s ~/.dotfiles/ssh ~/.ssh
+
+# Install oh-my-zsh
+ZSH=~/.oh-my-zsh
+
+if [ ! -n "$ZSH" ]; then
+  ZSH=~/.oh-my-zsh
+fi
+
+if [ -d "$ZSH" ]; then
+  echo "\033[0;33mYou already have Oh My Zsh installed.\033[0m You'll need to remove $ZSH if you want to install"
+  exit
+fi
+
+echo "\033[0;34mCloning Oh My Zsh...\033[0m"
+hash git >/dev/null 2>&1 && env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSH || {
+  echo "git not installed"
+  exit
+}
