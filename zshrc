@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
+# gnz theme based on robbyrussell theme
 ZSH_THEME="gnz"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -46,7 +46,7 @@ ZSH_CUSTOM=~/.dotfiles/zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl bundler)
+plugins=(git bundler)
 
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 source $ZSH/oh-my-zsh.sh
@@ -54,9 +54,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
