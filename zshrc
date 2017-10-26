@@ -91,19 +91,12 @@ if [[ -z $SSH_CONNECTION ]]; then
   export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 
   export GOPATH="/Users/gonzalocasas/gocode"
+  export CONDAPATH="/Users/gonzalocasas/anaconda3/bin"
 
-  # Android Studio
-  export GRADLE_HOME=$HOME/local.ch/tools/gradle-1.8;
-  export ANDROID_HOME=~/Library/Android/sdk;
-  alias adb='"$ANDROID_HOME"/platform-tools/adb'
-
-  export PATH="$PATH:/opt/X11/bin:/usr/local/go/bin:$HOME/.rvm/bin:$HOME/Library/Haskell/bin:$ANDROID_HOME/platform-tools:$GOPATH/bin"
-
+  export PATH="$CONDAPATH:$PATH:/opt/X11/bin:/usr/local/go/bin:$HOME/.rvm/bin:$HOME/Library/Haskell/bin:$GOPATH/bin"
+  
   # .NET Core
   source dnvm.sh
-
-  # Python autoenv (virtualenv)
-  source /usr/local/opt/autoenv/activate.sh
 fi
 
 export NVM_DIR="/Users/gonzalocasas/.nvm"
